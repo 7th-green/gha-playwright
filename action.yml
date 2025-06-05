@@ -1,7 +1,7 @@
 name: 'Playwright GitHub Action'
 description: 'GitHub Action that helps you run your playwright tests'
 branding:
-  icon: beaker
+  icon: at-sign
   color: green
 runs:
   using: 'docker'
