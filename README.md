@@ -21,4 +21,14 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: 7th-green/playwright@v1
+      - name: Install dependencies
+        run: npm ci
+      - name: Install playwright browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npx playwright test
 ```
+
+## Disclaimer
+
+This is "only" a wrapper for the mcr.microsoft.com/playwright image, which e.g. can be used in GitLab CI.
