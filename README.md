@@ -1,3 +1,36 @@
+# Obsolete - Archived
+
+This action is not needed, it can be done simpler with
+
+```yaml 
+name: Playwight
+
+on:
+  push:
+    tags:
+      - "**"
+
+jobs:
+  Playwright:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/checkout@v7
+      - name: Install dependencies
+        run: npm ci
+      - name: Install playwright browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npx playwright test
+```
+
+Have fun with your tests!
+
+
 # playwright GitHub Action
 
 This is a playwright GitHub Action that helps you run, playwright wihtout the hassle of waiting for the packages to be installed.
