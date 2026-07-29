@@ -1,1 +1,1 @@
-FROM mcr.microsoft.com/playwright:v1.53.0-noble
+FROM mcr.microsoft.com/playwright:v1.62.0-noble
